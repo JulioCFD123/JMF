@@ -1,0 +1,528 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+        <style>
+            @media screen and (max-width: 600px){
+                @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+                body{
+                    background-color: #515154;
+                    overflow-x: hidden;
+                    width: 50vw;
+                }
+                #formas{
+                    width: 60px;
+                    margin-right: 0.5rem;
+                    margin-bottom: 3.5rem;
+                    margin-top: 0;
+                    margin-left: 0;
+                }
+                #peças{
+                    width: 170px;
+                    height: 170px;
+                    margin-left: 1rem;
+                }
+                h1{
+                    font-family: "Rubik", sans-serif;
+                    color: white;
+                    width: 50vw;
+                    margin-top: 2rem;
+                    margin-left: 1.5rem;
+                    margin-bottom: 0;
+                    margin-right: 0;
+                }
+                h2{
+                    font-family: "Rubik", sans-serif;
+                    color: black;
+                    margin-left: 4.5rem;
+                    margin-bottom: 0.5rem;   
+                    margin-top: 0;  
+                    width: 50vw;     
+                }
+                
+                nav{
+                    width: 40vw;
+                }
+
+                section{
+                    width: 50vw;
+                }
+
+                #canjica{
+                    background-color: white;
+                    border-radius: 10px;
+                    padding: 10px;
+                    width: 65vw;
+                    margin-bottom: 3rem;
+                    margin-top: 1rem;
+                    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
+                }
+            
+                #diamante{
+                    background-color: white;
+                    border-radius: 10px;
+                    padding: 10px;
+                    width: 65vw;
+                    margin-bottom: 3rem;
+                    margin-top: 1rem;
+                    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
+                }
+            
+                #estelar{
+                    background-color: white;
+                    border-radius: 10px;
+                    padding: 10px;
+                    width: 65vw;
+                    margin-bottom: 3rem;
+                    margin-top: 1rem;
+                    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
+                }
+            
+                #flor{
+                    background-color: white;
+                    border-radius: 10px;
+                    padding: 10px;
+                    width: 65vw;
+                    margin-bottom: 3rem;
+                    margin-top: 1rem;
+                    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
+                }
+            
+                #trapezio{
+                    background-color: white;
+                    border-radius: 10px;
+                    padding: 10px;
+                    width: 65vw;
+                    margin-bottom: 3rem;
+                    margin-top: 1rem;
+                    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
+                }
+            
+                #guiadejardim{
+                    background-color: white;
+                    border-radius: 10px;
+                    padding: 10px;
+                    width: 65vw;
+                    margin-bottom: 3rem;
+                    margin-top: 1rem;
+                    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
+                }
+            
+                #mosaico{
+                    background-color: white;
+                    border-radius: 10px;
+                    padding: 10px;
+                    width: 65vw;
+                    margin-bottom: 3rem;
+                    margin-top: 1rem;
+                    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
+                }
+            
+                #pingadeira{
+                    background-color: white;
+                    border-radius: 10px;
+                    padding: 10px;
+                    width: 65vw;
+                    margin-bottom: 3rem;
+                    margin-top: 1rem;
+                    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
+                }
+            
+                #ripado{
+                    background-color: white;
+                    border-radius: 10px;
+                    padding: 10px;
+                    width: 65vw;
+                    margin-bottom: 3rem;
+                    margin-top: 1rem;
+                    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
+                }
+            
+                #pisante{
+                    background-color: white;
+                    border-radius: 10px;
+                    padding: 10px;
+                    width: 65vw;
+                    margin-bottom: 3rem;
+                    margin-top: 1rem;
+                    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
+                }
+            
+                #moldura{
+                    background-color: white;
+                    border-radius: 10px;
+                    padding: 10px;
+                    width: 65vw;
+                    margin-bottom: 3rem;
+                    margin-top: 1rem;
+                    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);  
+                }
+            
+                #barra{
+                    margin-top: 20px;
+                    margin-left: 1.5rem;
+                    font-size: 15pt;
+                    font-family: "Rubik", sans-serif;
+                    color: white;
+                    position: relative;
+                    padding: 0px 50px 10px 0;
+                    display: flex;
+                    width: 40vw;
+                }
+                
+            
+                button{
+                        align-items: center;
+                        justify-content: center;
+                        display: flex;
+                        width: 62vw;
+                        height: 2rem;
+                        background: rgb(5,224,37);
+                        background: linear-gradient(0deg, rgba(5,224,37,1) 0%, rgba(1,144,0,1) 100%);
+                        border-radius: 10px;
+                        border-color: rgb(3, 155, 3);
+                        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
+                        color: white;
+                }
+                a{
+                    color: white;
+                }
+            
+                #whatsapp{
+
+                        height: 90%;
+                }
+            }
+
+
+
+
+
+
+
+
+
+
+
+            @media screen and (min-width: 600px){
+              @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+                body{
+                    background-color: #515154;
+                    overflow-x: hidden;
+                }
+                #formas{
+                    width: 20%;
+                    margin-right: 7rem;
+                    margin-bottom: 8rem;
+                    margin-top: 0;
+                    margin-left: 4rem
+                }
+                #peças{
+                    width: 550px;
+                    height: 450px;
+                    margin-left: 6rem;
+                }
+                h1{
+                    font-family: "Rubik", sans-serif;
+                    color: white;
+                    font-size: 27pt;
+                    margin-top: 2rem;
+                    margin-left: 3rem;
+                    margin-bottom: 0;
+                    text-align: center;
+                }
+                h2{
+                    font-family: "Rubik", sans-serif;
+                    color: black;
+                    margin-left: 7.5rem;
+                    margin-bottom: 0rem;          
+                }
+            
+            
+                h3{
+                    margin-left: 6rem;
+                }
+            
+                #canjica{
+                    background-color: white;
+                    border-radius: 10px;
+                    padding: 15px;
+                    width: 1100px;
+                    margin: auto;
+                    margin-bottom: 5rem;
+                    margin-top: 1rem;
+                    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
+                }
+            
+                #diamante{
+                    background-color: white;
+                    border-radius: 10px;
+                    padding: 15px;
+                    width: 1100px;
+                    margin: auto;
+                    margin-bottom: 5rem;
+                    margin-top: 1rem;
+                    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
+                }
+            
+                #estelar{
+                    background-color: white;
+                    border-radius: 10px;
+                    padding: 15px;
+                    width: 1100px;
+                    margin: auto;
+                    margin-bottom: 5rem;
+                    margin-top: 1rem;
+                    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
+                }
+            
+                #flor{
+                    background-color: white;
+                    border-radius: 10px;
+                    padding: 15px;
+                    width: 1100px;
+                    margin: auto;
+                    margin-bottom: 5rem;
+                    margin-top: 1rem;
+                    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
+                }
+            
+                #trapezio{
+                    background-color: white;
+                    border-radius: 10px;
+                    padding: 15px;
+                    width: 1100px;
+                    margin: auto;
+                    margin-bottom: 5rem;
+                    margin-top: 1rem;
+                    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
+                }
+            
+                #guiadejardim{
+                    background-color: white;
+                    border-radius: 10px;
+                    padding: 15px;
+                    width: 1100px;
+                    margin: auto;
+                    margin-bottom: 5rem;
+                    margin-top: 1rem;
+                    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
+                }
+            
+                #mosaico{
+                    background-color: white;
+                    border-radius: 10px;
+                    padding: 15px;
+                    width: 1100px;
+                    margin: auto;
+                    margin-bottom: 5rem;
+                    margin-top: 1rem;
+                    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
+                }
+            
+                #pingadeira{
+                    background-color: white;
+                    border-radius: 10px;
+                    padding: 15px;
+                    width: 1100px;
+                    margin: auto;
+                    margin-bottom: 5rem;
+                    margin-top: 1rem;
+                    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
+                }
+            
+                #ripado{
+                    background-color: white;
+                    border-radius: 10px;
+                    padding: 15px;
+                    width: 1100px;
+                    margin: auto;
+                    margin-bottom: 5rem;
+                    margin-top: 1rem;
+                    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
+                }
+            
+                #pisante{
+                    background-color: white;
+                    border-radius: 10px;
+                    padding: 15px;
+                    width: 1100px;
+                    margin: auto;
+                    margin-bottom: 5rem;
+                    margin-top: 1rem;
+                    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
+                }
+            
+                #moldura{
+                    background-color: white;
+                    border-radius: 10px;
+                    padding: 15px;
+                    width: 1100px;
+                    margin: auto;
+                    margin-bottom: 5rem;
+                    margin-top: 1rem;
+                    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);  
+                }
+            
+                #barra{
+                    margin-top: 20px;
+                    margin-left: 15rem;
+                    margin-right: 3rem;
+                    font-size: 15pt;
+                    font-family: "Rubik", sans-serif;
+                    color: white;
+                    display: flex;
+                    position: relative;
+                    padding: 0px 50px 10px 0;
+                    text-decoration: none;
+                }
+                nav #barra::after{
+                    content: " ";
+                    width: 0px;
+                    height: 4px;
+                    background-color: rgb(248, 31, 31);
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    transition: 0.5s ease-in-out;
+                    }
+                
+                    nav #barra:hover::after{
+                    width: 100%;
+                    }
+                
+                nav{
+                    display: flex;
+                }
+            
+                button{
+                        align-items: center;
+                        justify-content: center;
+                        display: flex;
+                        width: 23%;
+                        height: 3rem;
+                        background: rgb(5,224,37);
+                        background: linear-gradient(0deg, rgba(5,224,37,1) 0%, rgba(1,144,0,1) 100%);
+                        border-radius: 10px;
+                        border-color: rgb(3, 155, 3);
+                        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
+                        color: white;
+                        margin-left: 3rem;
+                }
+                a{
+                    color: white;
+                }
+            
+                #whatsapp{
+
+                        height: 90%;
+                }  
+            }  
+            
+        </style>
+    </head>
+
+    <body>
+        <h1>Peças em 3D</h1>
+        <nav>
+            <a id="barra" href="file:///C:/Users/marco/Desktop/Curso%20programa%C3%A7%C3%A3o/sites/sitedevenda3d/sitedevenda3d/sitedevenda3d.html">Inicio</a>
+            <a id="barra" href="file:///C:/Users/marco/Desktop/Curso%20programa%C3%A7%C3%A3o/sites/sitedevenda3d/sitedevenda3d/modelos.html">Modelos</a>
+            <a id="barra" href="file:///C:/Users/marco/Desktop/Curso%20programa%C3%A7%C3%A3o/sites/sitedevenda3d/sitedevenda3d/redessociais.html">Redes Sociais</a>
+        </nav>
+
+        <section>
+            
+                <div id="diamante">
+                    <h2>Diamante</h2>
+                    <img id="formas" src="diamanteforma.png"/>
+                    <img id="peças" src="peçadiamante.jpg"/>
+                    <button><img src="whatsapp.png" id="whatsapp"/><a href="https://wa.me/556692150638?text=Ol%C3%A1,%20tudo%20bem?%20Vi%20um%20an%C3%BAncio%20sobre%20revestimento%20em%203D,%20gostaria%20de%20fazer%20um%20or%C3%A7amento!"><b>ORÇAMENTO AGORA</b></a></button>
+                </div>
+            
+                <div id="estelar">
+                    <h2>Estelar</h2>
+                    <img id="formas" src="estelarforma.jpg"/>
+                    <img id="peças" src="peçaestelar.jpeg"/>
+                    <button><img src="whatsapp.png" id="whatsapp"/><a href="https://wa.me/556692150638?text=Ol%C3%A1,%20tudo%20bem?%20Vi%20um%20an%C3%BAncio%20sobre%20revestimento%20em%203D,%20gostaria%20de%20fazer%20um%20or%C3%A7amento!"><b>ORÇAMENTO AGORA</b></a></button>
+                </div>
+
+                <div id="flor">
+                    <h2>Flor</h2>
+                    <img id="formas" src="florforma.jpg"/>
+                    <img id="peças" src="peçaflor.jpeg"/>
+                    <button><img src="whatsapp.png" id="whatsapp"/><a href="https://wa.me/556692150638?text=Ol%C3%A1,%20tudo%20bem?%20Vi%20um%20an%C3%BAncio%20sobre%20revestimento%20em%203D,%20gostaria%20de%20fazer%20um%20or%C3%A7amento!"><b>ORÇAMENTO AGORA</b></a></button>
+
+                </div>
+
+            <div id="trapezio">
+                <h2>Trapezio</h2>
+                <img id="formas" src="trapezioforma.png"/>
+                <img id="peças" src="peçacatavento.jpg"/>
+                <button><img src="whatsapp.png" id="whatsapp"/><a href="https://wa.me/556692150638?text=Ol%C3%A1,%20tudo%20bem?%20Vi%20um%20an%C3%BAncio%20sobre%20revestimento%20em%203D,%20gostaria%20de%20fazer%20um%20or%C3%A7amento!"><b>ORÇAMENTO AGORA</b></a></button>
+
+            </div>
+
+            <div id="guiadejardim">
+                <h2>Guia de Jardim</h2>
+                <img id="formas" src="guiadejardimforma.png"/>
+                <img id="peças" src="peçaguiadejardim.jpg"/>
+                <button><img src="whatsapp.png" id="whatsapp"/><a href="https://wa.me/556692150638?text=Ol%C3%A1,%20tudo%20bem?%20Vi%20um%20an%C3%BAncio%20sobre%20revestimento%20em%203D,%20gostaria%20de%20fazer%20um%20or%C3%A7amento!"><b>ORÇAMENTO AGORA</b></a></button>
+
+            </div>
+
+            <div id="mosaico">
+                <h2>Mosaico</h2>
+                <img id="formas" src="mosaicoforma.png"/>
+                <img id="peças" src="peçamosaico.jpeg"/>
+                <button><img src="whatsapp.png" id="whatsapp"/><a href="https://wa.me/556692150638?text=Ol%C3%A1,%20tudo%20bem?%20Vi%20um%20an%C3%BAncio%20sobre%20revestimento%20em%203D,%20gostaria%20de%20fazer%20um%20or%C3%A7amento!"><b>ORÇAMENTO AGORA</b></a></button>
+
+            </div>
+
+            <div id="pingadeira">
+                <h2>Pingadeira</h2>
+                <img id="formas" src="pingadeiraforma.png"/>
+                <img id="peças" src="peçapingadeira.jpg"/>
+                <button><img src="whatsapp.png" id="whatsapp"/><a href="https://wa.me/556692150638?text=Ol%C3%A1,%20tudo%20bem?%20Vi%20um%20an%C3%BAncio%20sobre%20revestimento%20em%203D,%20gostaria%20de%20fazer%20um%20or%C3%A7amento!"><b>ORÇAMENTO AGORA</b></a></button>
+
+            </div>
+
+            <div id="ripado">
+                <h2>Ripado</h2>
+                <img id="formas" src="ripadoforma.png"/>
+                <img id="peças" src="peçaripado.webp"/>
+                <button><img src="whatsapp.png" id="whatsapp"/><a href="https://wa.me/556692150638?text=Ol%C3%A1,%20tudo%20bem?%20Vi%20um%20an%C3%BAncio%20sobre%20revestimento%20em%203D,%20gostaria%20de%20fazer%20um%20or%C3%A7amento!"><b>ORÇAMENTO AGORA</b></a></button>
+
+            </div>
+
+            <div id="pisante">
+                <h2>Pisante</h2>
+                <img id="formas" src="pisanteforma.png"/>
+                <img id="peças" src="peçapisante.jpg"/>
+                <button><img src="whatsapp.png" id="whatsapp"/><a href="https://wa.me/556692150638?text=Ol%C3%A1,%20tudo%20bem?%20Vi%20um%20an%C3%BAncio%20sobre%20revestimento%20em%203D,%20gostaria%20de%20fazer%20um%20or%C3%A7amento!"><b>ORÇAMENTO AGORA</b></a></button>
+            </div>
+
+            <div id="moldura">
+                <h2>Pingadeira com moldura</h2>
+                <img id="formas" src="pingadeiracommolduraforma.png"/>
+                <img id="peças" src="peçapingadeiracommoldura.jpg"/>
+                <button><img src="whatsapp.png" id="whatsapp"/><a href="https://wa.me/556692150638?text=Ol%C3%A1,%20tudo%20bem?%20Vi%20um%20an%C3%BAncio%20sobre%20revestimento%20em%203D,%20gostaria%20de%20fazer%20um%20or%C3%A7amento!"><b>ORÇAMENTO AGORA</b></a></button>
+            
+            </div>
+
+            <div id="canjica">
+                <h2>Canjica</h2>
+                <img id="formas" src="canjicaforma.webp"/>
+                <img id="peças" src="peçacanjica.png"/>
+                <button><img src="whatsapp.png" id="whatsapp"/><a href="https://wa.me/556692150638?text=Ol%C3%A1,%20tudo%20bem?%20Vi%20um%20an%C3%BAncio%20sobre%20revestimento%20em%203D,%20gostaria%20de%20fazer%20um%20or%C3%A7amento!"><b>ORÇAMENTO AGORA</b></a></button>
+            </div>   
+   
+        </section>
+    </body>
+</html>
+    
+
+
+
+
+
+
