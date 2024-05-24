@@ -10,7 +10,6 @@
         background: linear-gradient(90deg, rgba(68,12,131,1) 0%, rgba(12,12,68,1) 50%, rgba(24,3,164,1) 100%);
         background-image: url(backgroundimgmobile.png);    
         background-size: cover;
-        overflow: hidden;
     }
 
     #contact{
@@ -71,7 +70,7 @@
     }
     
     #primeiroparagrafo{
-        margin-top: 15rem;
+        margin-top: 74%;
         
     }
     p{
